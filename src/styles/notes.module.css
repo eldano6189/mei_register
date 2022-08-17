@@ -1,0 +1,76 @@
+.container__page {
+  height: 100vh;
+  min-height: 600px;
+  padding: 5rem 6vw;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.container__page ul {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.container__panel {
+  width: 100%;
+  padding: 2em;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 1 / 1;
+  margin: 0.5em;
+  padding: 2em;
+  background: rgb(var(--bc-2) / 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+}
+
+.tile__text {
+  width: 100%;
+  padding-bottom: 0.4em;
+}
+
+.tile__text > * {
+  padding: 0.4em 0;
+}
+
+.tile__text h2 {
+  border-bottom: 1px solid rgb(var(--fc-1) / 0.1);
+}
+
+.container__input input {
+  width: 100%;
+  padding: 0.5em 0;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgb(var(--fc-1));
+}
+
+.container__input input:focus-visible,
+.container__input input:focus {
+  border: none;
+  border-bottom: 2px solid rgb(var(--color-1));
+}
+
+@media screen and (min-width: 900px) {
+  .tile {
+    width: 30vw;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .tile {
+    width: 20vw;
+  }
+}

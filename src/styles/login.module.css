@@ -1,0 +1,82 @@
+.container__page {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container__canvas {
+  grid-column: 1 / 13;
+  grid-row: 1 / 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__login {
+  grid-column: 2 / 12;
+  grid-row: 1 / 1;
+  aspect-ratio: 1 / 1;
+  padding: 2em;
+  background: rgb(var(--bc-2) / 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+  user-select: none;
+  z-index: 1;
+}
+
+.container__title > * {
+  padding-bottom: 0.4em;
+}
+
+.container__login > div {
+  padding: 0.8em 0;
+}
+
+.container__input input {
+  width: 100%;
+  padding: 0.5em 0;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgb(var(--fc-1));
+}
+
+.container__input input:focus-visible,
+.container__input input:focus {
+  border: none;
+  border-bottom: 2px solid rgb(var(--color-1));
+}
+
+.container__remember {
+  display: flex;
+  align-items: center;
+}
+
+.container__remember_checkbox {
+  width: 1em;
+  margin-right: 0.5em;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid rgb(var(--fc-1));
+}
+
+@media screen and (min-width: 800px) {
+  .container__login {
+    grid-column: 2 / 8;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container__login {
+    grid-column: 3 / 6;
+  }
+  .container__canvas {
+    grid-column: 4 / 13;
+  }
+}

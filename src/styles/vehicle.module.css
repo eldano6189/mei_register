@@ -1,0 +1,116 @@
+.container__page {
+  min-height: 600px;
+  padding: 5rem 6vw;
+  width: 100%;
+}
+
+.container__info {
+  padding: 2em;
+  background: rgb(var(--bc-2) / 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.container__info ul {
+  display: flex;
+}
+
+.info__card {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1;
+  min-width: 200px;
+  padding: 1em;
+}
+
+.card__text > * {
+  padding: 0.5em;
+}
+
+.card__text {
+  border-bottom: 1px solid rgb(var(--fc-1) / 0.1);
+}
+
+.container__img {
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__img svg {
+  width: 65%;
+  height: auto;
+}
+
+.container__img p {
+  position: absolute;
+  color: rgb(var(--bc-2));
+}
+
+.container__sheets {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2em;
+  background: rgb(var(--bc-2) / 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+}
+
+.tooltip__hint {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1em 2em;
+  background: rgb(var(--bc-2) / 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+}
+
+.container__sheets > * {
+  padding-right: 1em;
+}
+
+.container__quickview {
+  padding: 2em;
+  background: rgb(var(--bc-2) / 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+}
+
+.container__table {
+  overflow-x: auto;
+}
+
+.quickview__text {
+  padding: 1em 0;
+}
+
+.container__quickview table th {
+  padding: 0.5em;
+  position: relative;
+  cursor: pointer;
+}
+
+.container__quickview table th span {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  visibility: hidden;
+  padding: 2em;
+  background-color: rgb(var(--fc-1));
+}
+
+.container__quickview table th span h2 {
+  color: rgb(var(--bc-2));
+}
+
+.container__quickview table th:hover span {
+  visibility: visible;
+}

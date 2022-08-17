@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Background from "./components/background/background";
+import Header from "./components/header/header";
+import Vehicle from "./pages/vehicle";
+import { PageRoutes } from "./data/pageRoutes";
+import { Vehicles } from "./data/vehicles";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Background />
+      <Header />
+      <main>
+        <Routes>
+          {PageRoutes.map((page, index) => {
+            return (
+              <Route
+                key={index}
+                exact
+                path={page.path}
+                element={page.component}
+              />
+            );
+          })}
+          {Vehicles.map((veh, index) => {
+            return (
+              <Route
+                key={index}
+                exact
+                path={`/${veh.vrn}`}
+                element={<Vehicle data={veh} authed={true} />}
+              />
+            );
+          })}
+        </Routes>
+      </main>
     </div>
   );
-}
+};
 
 export default App;

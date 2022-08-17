@@ -1,0 +1,92 @@
+.container__page {
+  height: 100vh;
+  min-height: 600px;
+  padding: 5rem 6vw;
+  width: 100%;
+}
+
+.container__panel {
+  padding: 0.5em;
+}
+
+.container__panel > * {
+  padding: 0.5em;
+}
+
+.container__panel ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container__panel li {
+  padding: 0.5em 0.5em 0.5em 0;
+}
+
+.container__cards {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 1 / 1;
+  margin: 0.5em;
+  padding: 2em;
+  background: rgb(var(--bc-2) / 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+}
+
+.card > * {
+  padding: 0.4em 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__text {
+  flex: 0 1 auto;
+}
+
+.card__text > * {
+  padding: 0.4em 0;
+}
+
+.card__text h2 {
+  border-bottom: 1px solid rgb(var(--fc-1) / 0.1);
+}
+
+.container__img {
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__img svg {
+  width: 65%;
+  height: auto;
+}
+
+.container__img p {
+  position: absolute;
+  color: rgb(var(--bc-2));
+}
+
+.print__buttons {
+  flex: 0 1 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+.print__buttons li {
+  padding: 0.5em 0.5em 0.5em 0;
+}

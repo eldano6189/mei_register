@@ -1,0 +1,68 @@
+.header {
+  position: fixed;
+  width: 100%;
+  background: rgb(var(--bc-2) / 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+  display: flex;
+  z-index: 10;
+}
+
+.container__logo {
+  flex: 1 1;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  aspect-ratio: 1 / 1;
+}
+
+.logo svg {
+  height: 60%;
+  width: auto;
+}
+
+.header ul {
+  position: fixed;
+  top: 0;
+  right: 0;
+  flex: 1 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: all 0.3s ease;
+  padding-right: 0.5em;
+}
+
+.list__item,
+.list__item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.list__item:last-child {
+  width: 4rem;
+  aspect-ratio: 1 / 1;
+}
+
+.list__item path {
+  transition: all 0.2s ease;
+}
+
+.list__item:hover path {
+  fill: rgb(var(--color-1));
+}
+
+.list__item svg {
+  width: 50%;
+  height: 50%;
+}
