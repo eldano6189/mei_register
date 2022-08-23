@@ -1,5 +1,6 @@
+//External imports
 import { Suspense } from "react";
-
+import { Canvas } from "@react-three/fiber";
 import {
   ContactShadows,
   Environment,
@@ -8,7 +9,6 @@ import {
   Html,
   useProgress,
 } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
 
 const Loader = () => {
   const { progress } = useProgress();
@@ -19,7 +19,8 @@ const Loader = () => {
   );
 };
 
-export const ModelScene = ({ children }) => {
+const ModelScene = ({ children }) => {
+  //Component variables
   const color1 = "#4169e1";
   const color2 = "#ffef00";
   const color3 = "#b12820";
@@ -105,3 +106,5 @@ export const ModelScene = ({ children }) => {
     </Canvas>
   );
 };
+
+export default ModelScene;

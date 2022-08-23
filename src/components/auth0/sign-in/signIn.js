@@ -1,15 +1,36 @@
-import styles from "./signIn.module.css";
+//External imports
 import { Auth } from "aws-amplify";
 import { useEffect, useContext, useState } from "react";
-import Tick from "../../svg/tick";
+
+//Data imports
 import Data from "../../../context/context";
+
+//Style imports
+import styles from "./signIn.module.css";
+
+//Component imports
+import Tick from "../../svg/tick";
 import Loading from "../../loading/loading";
 
 const SignIn = () => {
+  //Component states
   const { user, setUser, setChangePassword, setAuthorised } = useContext(Data);
   const [loading, setLoading] = useState(false);
   const [userError, setUserError] = useState(false);
 
+  //Component useEffects
+  useEffect(() => {
+    const getDetails = JSON.parse(localStorage.getItem("RememberLogin"));
+    getDetails && setUser(getDetails);
+  }, [setUser]);
+
+  useEffect(() => {
+    user.remember
+      ? localStorage.setItem("RememberLogin", JSON.stringify(user))
+      : localStorage.removeItem("RememberLogin");
+  }, [user]);
+
+  //component functions
   const handleLogin = async () => {
     setLoading(true);
     await Auth.signIn(user.username, user.password)
@@ -30,17 +51,6 @@ const SignIn = () => {
         setUserError(true);
       });
   };
-
-  useEffect(() => {
-    const getDetails = JSON.parse(localStorage.getItem("RememberLogin"));
-    getDetails && setUser(getDetails);
-  }, [setUser]);
-
-  useEffect(() => {
-    user.remember
-      ? localStorage.setItem("RememberLogin", JSON.stringify(user))
-      : localStorage.removeItem("RememberLogin");
-  }, [user]);
 
   const handleUserName = (e) => {
     setUserError(false);

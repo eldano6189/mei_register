@@ -1,9 +1,16 @@
-import styles from "../styles/login.module.css";
+//External imports
 import { useContext } from "react";
-import { ModelScene } from "../components/scene/scene";
+
+//Data imports
+import Data from "../context/context";
+
+//Style imports
+import styles from "../styles/login.module.css";
+
+//Component imports
+import ModelScene from "../components/scene/scene";
 import Reme from "../components/models/Reme";
 import SignIn from "../components/auth0/sign-in/signIn";
-import Data from "../context/context";
 import ChangePassword from "../components/auth0/change-password/changePassword";
 
 const Login = () => {

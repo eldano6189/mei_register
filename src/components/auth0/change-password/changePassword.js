@@ -1,13 +1,20 @@
-import styles from "./changePassword.module.css";
+//External imports
 import { useState, useContext } from "react";
 import { Auth } from "aws-amplify";
+
+//Data imports
 import Data from "../../../context/context";
 
+//Style imports
+import styles from "./changePassword.module.css";
+
 const ChangePassword = () => {
+  //Component states
   const { user, setChangePassword } = useContext(Data);
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
+  //Component functions
   const handleChangePassword = async () => {
     await Auth.completeNewPassword(user, confirmPassword).then(
       setChangePassword(false)

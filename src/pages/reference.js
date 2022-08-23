@@ -1,5 +1,8 @@
-import styles from "../styles/reference.module.css";
+//Data imports
 import { PolicyLinks } from "../data/policyLinks";
+
+//Style imports
+import styles from "../styles/reference.module.css";
 
 const References = () => {
   return (

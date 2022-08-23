@@ -1,31 +1,42 @@
+//External imports
 import { useState, useEffect } from "react";
-import styles from "../styles/fleet.module.css";
 import { Link } from "react-router-dom";
+
+//Data imports
 import { Vehicles } from "../data/vehicles";
+
+//Style imports
+import styles from "../styles/fleet.module.css";
+
+//Component imports
 import Landrover from "../components/svg/Landrover";
 import MAN from "../components/svg/Man";
 import TRL from "../components/svg/Trl";
 import Feps from "../components/svg/FEPS";
 
 const Fleet = () => {
+  //Component states
   const [filter, setFilter] = useState([]);
-
   const [landrover, setLandrover] = useState(0);
   const [man, setMan] = useState(0);
   const [trl, setTrl] = useState(0);
   const [feps, setFeps] = useState(0);
 
-  const getVehTotals = (platform) =>
-    Vehicles.reduce((acc, val) => {
-      return acc + (val.type === platform);
-    }, 0);
-
+  //Component useEffects
+  //Calls for vehicle totals on load
   useEffect(() => {
     setLandrover(getVehTotals("LANDROVER"));
     setMan(getVehTotals("MAN"));
     setTrl(getVehTotals("TRL"));
     setFeps(getVehTotals("FEPS"));
   }, []);
+
+  //Component functions
+  //Gets total vehicles based on platform type
+  const getVehTotals = (platform) =>
+    Vehicles.reduce((acc, val) => {
+      return acc + (val.type === platform);
+    }, 0);
 
   return (
     <div className={styles.container__page}>

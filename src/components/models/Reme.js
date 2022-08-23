@@ -1,8 +1,10 @@
+//External imports
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
 export default function Reme({ ...props }) {
+  //Component references
   const group = useRef();
   const model = useRef();
   const { nodes, materials } = useGLTF("/models/reme.glb");

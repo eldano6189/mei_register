@@ -1,12 +1,17 @@
+//Data imports
+import { Rover } from "../data/932/Landrover";
+import { AllOthers } from "../data/932/AllOthers";
+import { All } from "../data/933/All";
+
+//Style imports
 import styles from "../styles/vehicle.module.css";
+
+//Component imports
 import Landrover from "../components/svg/Landrover";
 import MAN from "../components/svg/Man";
 import TRL from "../components/svg/Trl";
 import Feps from "../components/svg/FEPS";
 import { PDF932, PDF933 } from "../components/PDF-printout/PDFPrintout";
-import { Rover } from "../data/932/Landrover";
-import { AllOthers } from "../data/932/AllOthers";
-import { All } from "../data/933/All";
 
 const Vehicle = ({ data }) => {
   return (

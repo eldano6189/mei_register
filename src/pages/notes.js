@@ -1,11 +1,18 @@
+//External imports
 import { useState, useRef, useEffect } from "react";
+
+//Style imports
 import styles from "../styles/notes.module.css";
+
+//Component imports
 import Tick from "../components/svg/tick";
 
 const Notes = () => {
+  //Component references
   const subjectRef = useRef();
   const noteRef = useRef();
 
+  //Component states
   const [priority, setPriority] = useState(false);
   const [notes, setNotes] = useState(() => {
     const getNotes = localStorage.getItem("Notes");
@@ -19,11 +26,7 @@ const Notes = () => {
     priority: false,
   });
 
-  //Sets note data to localStorage
-  useEffect(() => {
-    localStorage.setItem("Notes", JSON.stringify(notes));
-  }, [notes]);
-
+  //Component variables
   //Creates timestamp for note
   const date = new Date();
   const day = date.getDate();
@@ -31,6 +34,13 @@ const Notes = () => {
   const year = date.getFullYear();
   const timestamp = `${day}/${month}/${year}`;
 
+  //Component useEffects
+  //Sets note data to localStorage
+  useEffect(() => {
+    localStorage.setItem("Notes", JSON.stringify(notes));
+  }, [notes]);
+
+  //Component functions
   const handleSubject = (e) => {
     newNote.subject = e.target.value;
     setNewNote({ ...newNote });

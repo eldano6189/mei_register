@@ -1,6 +1,11 @@
+//External imports
 import { Link } from "react-router-dom";
 import { useContext } from "react";
+
+//Data imports
 import Data from "../context/context";
+
+//Style imports
 import styles from "../styles/home.module.css";
 
 const Home = () => {

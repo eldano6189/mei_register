@@ -1,3 +1,4 @@
+//Style imports
 import styles from "./loading.module.css";
 
 const Loading = () => {

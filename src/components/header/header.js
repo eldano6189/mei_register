@@ -1,6 +1,10 @@
-import styles from "./header.module.css";
+//External imports
 import { useLocation, useNavigate } from "react-router-dom";
 
+//Style imports
+import styles from "./header.module.css";
+
+//Component imports
 import Logout from "../svg/logout";
 import Reme from "../svg/reme";
 import SignOut from "../auth0/sign-out/signOut";
@@ -9,6 +13,7 @@ const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  //Component functions
   const back = () => {
     navigate(-1);
   };

@@ -1,11 +1,17 @@
+//External imports
 import { useContext } from "react";
-import styles from "./signOut.module.css";
 import { Auth } from "aws-amplify";
+
+//Data imports
 import Data from "../../../context/context";
+
+//Style imports
+import styles from "./signOut.module.css";
 
 const SignOut = ({ children }) => {
   const { setAuthorised } = useContext(Data);
 
+  //Component functions
   const signOut = async () => {
     try {
       await Auth.signOut();

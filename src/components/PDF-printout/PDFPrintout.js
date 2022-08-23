@@ -1,13 +1,16 @@
-import styles from "./PDFPrintout.module.css";
-import { useContext } from "react";
-import Data from "../../context/context";
-
+//External imports
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
+import { useContext } from "react";
 
+//Data imports
+import Data from "../../context/context";
 import { Rover } from "../../data/932/Landrover";
 import { AllOthers } from "../../data/932/AllOthers";
 import { All } from "../../data/933/All";
+
+//Style imports
+import styles from "./PDFPrintout.module.css";
 
 export const PDF932 = ({ data }) => {
   const { user } = useContext(Data);

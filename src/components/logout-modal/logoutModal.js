@@ -1,26 +1,25 @@
-import styles from "./logoutModal.module.css";
+//External imports
 import { useEffect, useState, useContext } from "react";
-import Data from "../../context/context";
 import { useLocation } from "react-router-dom";
+
+//Data imports
+import Data from "../../context/context";
+
+//Style imports
+import styles from "./logoutModal.module.css";
 
 const LogoutModal = () => {
   const location = useLocation();
   const { setAuthorised } = useContext(Data);
-  const countDown = 3600;
+  //Component variables
+  const countDown = 1800;
 
+  //Component states
   const [modalOpen, setModalOpen] = useState(false);
   const [logoutTimer, setLogoutTimer] = useState(countDown);
 
-  const handleCancelLogout = () => {
-    setModalOpen(false);
-    setLogoutTimer(countDown);
-  };
-
-  const handleSignOut = () => {
-    setAuthorised(false);
-    setModalOpen(false);
-  };
-
+  //Component useEffects
+  //Checks to see if we are not on /login and begins countdown timer for signout modal
   useEffect(() => {
     const timer =
       location.pathname !== "/login" && logoutTimer > 0
@@ -35,6 +34,7 @@ const LogoutModal = () => {
     return () => clearInterval(timer);
   }, [logoutTimer, location]);
 
+  //Checks if timer is on 0, then logs out user
   useEffect(() => {
     if (logoutTimer === 0) {
       setAuthorised(false);
@@ -42,6 +42,17 @@ const LogoutModal = () => {
       setLogoutTimer(countDown);
     }
   }, [logoutTimer, setAuthorised]);
+
+  //Component functions
+  const handleCancelLogout = () => {
+    setModalOpen(false);
+    setLogoutTimer(countDown);
+  };
+
+  const handleSignOut = () => {
+    setAuthorised(false);
+    setModalOpen(false);
+  };
 
   return (
     <div
