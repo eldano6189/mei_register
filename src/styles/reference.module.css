@@ -6,12 +6,14 @@
 }
 
 .container__panel {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   padding: 2em;
 }
 
 .container__panel > * {
-  padding: 0.2em 0;
+  margin: 0.2em 0;
 }
 
 .container__links {
@@ -35,4 +37,8 @@
 .link li {
   list-style: square;
   padding: 0.2em 0;
+}
+
+.link li p:hover {
+  color: rgb(var(--color-1));
 }

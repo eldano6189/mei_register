@@ -33,9 +33,12 @@ a {
 }
 
 h1 {
+  position: relative;
   color: rgb(var(--fc-1));
   font-size: var(--fs-header);
   letter-spacing: -0.05em;
+  overflow: hidden;
+  display: inline-block;
 }
 
 h2,
@@ -43,9 +46,54 @@ h3,
 h4,
 h5,
 h6 {
+  position: relative;
   color: rgb(var(--fc-1) / 0.75);
   font-size: var(--fs-sub-header);
   letter-spacing: -0.05em;
+  overflow: hidden;
+  display: inline-block;
+}
+
+p {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+h1:before,
+h2:before,
+h3:before,
+h4:before,
+h5:before,
+p:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(var(--fc-1));
+  transform: translateX(-110%);
+  animation: slide-block 0.5s ease 0.1s forwards;
+  z-index: 2;
+}
+
+h1:after,
+h2:after,
+h3:after,
+h4:after,
+h5:after,
+p:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(var(--bc-1));
+  opacity: 1;
+  animation: fade-block 0.5s ease 0.4s forwards;
+  z-index: 1;
 }
 
 p,
@@ -95,4 +143,22 @@ canvas:active {
 
 ::-webkit-scrollbar-thumb {
   background: rgb(var(--fc-1));
+}
+
+@keyframes slide-block {
+  from {
+    transform: translateX(-110%);
+  }
+  to {
+    transform: translate(110%);
+  }
+}
+
+@keyframes fade-block {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

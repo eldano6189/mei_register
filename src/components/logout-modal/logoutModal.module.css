@@ -25,6 +25,8 @@
 }
 
 .container__head {
+  display: flex;
+  flex-direction: column;
   flex: 0 1 auto;
   padding: 0.2em 0;
 }

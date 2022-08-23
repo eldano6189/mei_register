@@ -34,7 +34,7 @@ const App = () => {
       <LogoutModal />
       <ScrollTop>
         <main>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={null}>
             <Routes>
               {authorised && (
                 <>

@@ -31,10 +31,12 @@
 }
 
 .card__text > * {
-  padding: 0.5em;
+  margin: 0.5em;
 }
 
 .card__text {
+  display: flex;
+  flex-direction: column;
   border-bottom: 1px solid rgb(var(--fc-1) / 0.1);
 }
 
@@ -49,9 +51,6 @@
 .container__img svg {
   width: 65%;
   height: auto;
-  transform: translateX(-120%) rotate(-2deg);
-  transform-origin: left;
-  animation: vehicle-in 1s ease-out forwards;
 }
 
 .container__img p {
