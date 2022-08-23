@@ -1,5 +1,5 @@
 .container__page {
-  height: 100vh;
+  height: auto;
   min-height: 600px;
   padding: 5rem 6vw;
   width: 100%;
@@ -38,8 +38,9 @@
   aspect-ratio: 1 / 1;
   margin: 0.5em;
   padding: 2em;
-  background: rgb(var(--bc-2) / 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  background: rgb(var(--bc-2) / 0.25);
+  border: 1px solid rgb(var(--bc-2) / 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
 }
 
@@ -67,6 +68,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .container__img svg {

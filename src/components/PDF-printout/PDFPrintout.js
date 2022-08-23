@@ -1,4 +1,6 @@
 import styles from "./PDFPrintout.module.css";
+import { useContext } from "react";
+import Data from "../../context/context";
 
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
@@ -8,6 +10,8 @@ import { AllOthers } from "../../data/932/AllOthers";
 import { All } from "../../data/933/All";
 
 export const PDF932 = ({ data }) => {
+  const { user } = useContext(Data);
+
   const date = new Date();
   const day = date.getDate();
   const month = date.getMonth();
@@ -34,8 +38,7 @@ export const PDF932 = ({ data }) => {
       <table className={styles.table} id="table-932">
         <thead>
           <tr>
-            {/* <th colSpan="3">INSPECTOR: {user.username}</th> */}
-            <th colSpan="3">INSPECTOR: </th>
+            <th colSpan="3">INSPECTOR: {user.username}</th>
             <th colSpan="1">932 Inspection Sheet</th>
           </tr>
           <tr>
@@ -97,6 +100,8 @@ export const PDF932 = ({ data }) => {
 };
 
 export const PDF933 = ({ data }) => {
+  const { user } = useContext(Data);
+
   const date = new Date();
   const day = date.getDate();
   const month = date.getMonth();
@@ -120,8 +125,7 @@ export const PDF933 = ({ data }) => {
       <table className={styles.table} id="table-933">
         <thead>
           <tr>
-            {/* <th colSpan="3">INSPECTOR: {user.username}</th> */}
-            <th colSpan="3">INSPECTOR:</th>
+            <th colSpan="3">INSPECTOR: {user.username}</th>
             <th colSpan="1">933 Inspection Sheet</th>
           </tr>
           <tr>

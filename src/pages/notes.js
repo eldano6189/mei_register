@@ -1,23 +1,35 @@
-import { useState, useRef, useContext } from "react";
-import Data from "../context/context";
+import { useState, useRef, useEffect } from "react";
 import styles from "../styles/notes.module.css";
+import Tick from "../components/svg/tick";
 
 const Notes = () => {
-  const { notes, setNotes } = useContext(Data);
   const subjectRef = useRef();
   const noteRef = useRef();
 
+  const [priority, setPriority] = useState(false);
+  const [notes, setNotes] = useState(() => {
+    const getNotes = localStorage.getItem("Notes");
+    const parseNotes = JSON.parse(getNotes);
+    return parseNotes || [];
+  });
+  const [newNote, setNewNote] = useState({
+    subject: "",
+    note: "",
+    date: "",
+    priority: false,
+  });
+
+  //Sets note data to localStorage
+  useEffect(() => {
+    localStorage.setItem("Notes", JSON.stringify(notes));
+  }, [notes]);
+
+  //Creates timestamp for note
   const date = new Date();
   const day = date.getDate();
   const month = date.getMonth() + 1;
   const year = date.getFullYear();
   const timestamp = `${day}/${month}/${year}`;
-
-  const [newNote, setNewNote] = useState({
-    subject: "",
-    note: "",
-    date: "",
-  });
 
   const handleSubject = (e) => {
     newNote.subject = e.target.value;
@@ -29,12 +41,18 @@ const Notes = () => {
     setNewNote({ ...newNote });
   };
 
+  const handleRememberPriority = () => {
+    setPriority(!priority);
+  };
+
   const handleAddNote = () => {
     newNote.subject = subjectRef.current.value;
     newNote.note = noteRef.current.value;
     newNote.date = timestamp;
+    newNote.priority = priority;
     setNotes([...notes, newNote]);
     setNewNote({ ...newNote });
+    setPriority(false);
     subjectRef.current.value = "";
     noteRef.current.value = "";
   };
@@ -54,51 +72,72 @@ const Notes = () => {
           Any notes created here are not shared between users, these are just
           for you!
         </h2>
+        <p>
+          Clicking <q>Priority</q> will place it to the beginning of your list.
+        </p>
       </div>
       <ul>
         <li className={styles.tile}>
-          <div className={styles.tile__text}>
+          <div className={styles.tile__head}>
             <h1>Note</h1>
             <h2>Add your notes here.</h2>
-            <div className={styles.container__input}>
-              <p>Subject</p>
-              <input
-                type="text"
-                ref={subjectRef}
-                onChange={(e) => handleSubject(e)}
-              />
+          </div>
+          <div className={styles.tile__body}>
+            <p>Subject</p>
+            <input
+              type="text"
+              ref={subjectRef}
+              onChange={(e) => handleSubject(e)}
+            />
+            <p>Note</p>
+            <input type="text" ref={noteRef} onChange={(e) => handleNote(e)} />
+          </div>
+          <div className={styles.tile__foot}>
+            <div className={styles.foot__priority}>
+              <div
+                className={styles.container__priority_checkbox}
+                onClick={handleRememberPriority}
+              >
+                {priority && <Tick />}
+              </div>
+              <p>Priority?</p>
             </div>
-            <div className={styles.container__input}>
-              <p>Note</p>
-              <input
-                type="text"
-                ref={noteRef}
-                onChange={(e) => handleNote(e)}
-              />
+            <div className={styles.foot__button}>
+              <button onClick={() => handleAddNote()}>Add</button>
             </div>
           </div>
-          <button onClick={() => handleAddNote()}>Add</button>
         </li>
         {notes.length !== 0 &&
-          notes.map((note, index) => {
-            return (
-              <li key={index} className={styles.tile}>
-                <div className={styles.tile__text}>
-                  <h2>Created</h2>
-                  <p>{note.date}</p>
-                </div>
-                <div className={styles.tile__text}>
-                  <h2>Subject</h2>
-                  <p>{note.subject}</p>
-                </div>
-                <div className={styles.tile__text}>
-                  <h2>Note</h2>
-                  <p>{note.note}</p>
-                </div>
-                <button onClick={() => handleRemoveNote(index)}>Delete</button>
-              </li>
-            );
-          })}
+          notes
+            .sort((a, b) => Number(b.priority) - Number(a.priority))
+            .map((note, index) => {
+              return (
+                <li key={index} className={styles.tile}>
+                  <div className={styles.tile__head}>
+                    <h2>
+                      Created{" "}
+                      {note.priority && (
+                        <span className={styles.priority}>- Priority</span>
+                      )}
+                    </h2>
+                    <p>{note.date}</p>
+                    <h2>Subject</h2>
+                    <p>{note.subject}</p>
+                  </div>
+                  <div className={styles.tile__body}>
+                    <h2>Note</h2>
+                    <p>{note.note}</p>
+                  </div>
+                  <div className={styles.tile__foot}>
+                    <div className={styles.foot__button}>
+                      <button onClick={() => handleRemoveNote(index)}>
+                        Remove
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
       </ul>
     </div>
   );

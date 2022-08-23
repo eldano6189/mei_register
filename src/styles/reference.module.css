@@ -1,0 +1,38 @@
+.container__page {
+  height: auto;
+  min-height: 600px;
+  padding: 5rem 6vw;
+  width: 100%;
+}
+
+.container__panel {
+  width: 100%;
+  padding: 2em;
+}
+
+.container__panel > * {
+  padding: 0.2em 0;
+}
+
+.container__links {
+  display: flex;
+  flex-direction: column;
+  background: rgb(var(--bc-2) / 0.25);
+  border: 1px solid rgb(var(--bc-2) / 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.link {
+  padding: 2em;
+  border-bottom: 1px solid rgb(var(--fc-1) / 0.1);
+}
+
+.link h2 {
+  padding: 0.2em 0;
+}
+
+.link li {
+  list-style: square;
+  padding: 0.2em 0;
+}

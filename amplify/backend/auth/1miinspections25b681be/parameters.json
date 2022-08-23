@@ -1,0 +1,14 @@
+{
+  "authSelections": "userPoolOnly",
+  "resourceName": "1miinspections25b681be",
+  "serviceType": "imported",
+  "region": "eu-west-2",
+  "aliasAttributes": [
+    "preferred_username"
+  ],
+  "requiredAttributes": [],
+  "passwordPolicyMinLength": 6,
+  "passwordPolicyCharacters": [],
+  "mfaConfiguration": "OFF",
+  "mfaTypes": []
+}

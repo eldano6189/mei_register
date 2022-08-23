@@ -1,8 +1,9 @@
 import styles from "./header.module.css";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import Logout from "../svg/logout";
 import Reme from "../svg/reme";
+import SignOut from "../auth0/sign-out/signOut";
 
 const Header = () => {
   const location = useLocation();
@@ -31,9 +32,9 @@ const Header = () => {
           ))}
         {location.pathname !== "/login" && (
           <li className={styles.list__item}>
-            <Link to="/login">
+            <SignOut>
               <Logout />
-            </Link>
+            </SignOut>
           </li>
         )}
       </ul>

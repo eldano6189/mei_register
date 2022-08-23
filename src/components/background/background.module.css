@@ -14,8 +14,23 @@
   overflow: hidden;
 }
 
-.container__background svg {
+.container__background svg:nth-of-type(1) {
   height: 100%;
-  opacity: 0.025;
+  opacity: 0.03;
   transform: translateX(-50%) scale(3);
+}
+
+.container__background svg:nth-of-type(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  opacity: 0.03;
+  transform: translateX(50%) scale(6);
+}
+
+@media screen and (max-width: 850px) {
+  .container__background svg:nth-of-type(2) {
+    display: none;
+  }
 }

@@ -1,0 +1,78 @@
+.container__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background-color: rgb(var(--bc-1) / 80%);
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  aspect-ratio: 1 / 1;
+  margin: 0.5em;
+  padding: 2em;
+  background: rgb(var(--bc-2) / 0.25);
+  border: 1px solid rgb(var(--bc-2) / 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.container__head {
+  flex: 0 1 auto;
+  padding: 0.2em 0;
+}
+
+.container__head > * {
+  padding: 0.2em 0;
+}
+
+.container__head h2 {
+  border-bottom: 1px solid rgb(var(--fc-1) / 0.1);
+}
+
+.container__body {
+  flex: 1 1 auto;
+  padding: 0.2em 0;
+}
+
+.container__body > * {
+  padding: 0.2em 0;
+}
+
+.container__body p span {
+  font-weight: bold;
+}
+
+.container__foot {
+  flex: 0 1 auto;
+  padding: 0.2em 0;
+}
+
+.container__foot > * {
+  margin-right: 1em;
+}
+
+@media screen and (min-width: 700px) {
+  .modal {
+    width: 60vw;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .modal {
+    width: 30vw;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  .modal {
+    width: 20vw;
+  }
+}
