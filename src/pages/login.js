@@ -9,7 +9,7 @@ import styles from "../styles/login.module.css";
 
 //Component imports
 import ModelScene from "../components/scene/scene";
-import Reme from "../components/models/Reme";
+import HammerTongues from "../components/models/hammerTongues";
 import SignIn from "../components/auth0/sign-in/signIn";
 import ChangePassword from "../components/auth0/change-password/changePassword";
 
@@ -24,7 +24,7 @@ const Login = () => {
 
       <div className={styles.container__canvas}>
         <ModelScene>
-          <Reme />
+          <HammerTongues />
         </ModelScene>
       </div>
     </div>

@@ -91,7 +91,7 @@ p:after {
   width: 100%;
   height: 100%;
   background-color: rgb(var(--bc-1));
-  opacity: 1;
+  transform: translateX(0);
   animation: fade-block 0.5s ease 0.4s forwards;
   z-index: 1;
 }
@@ -156,9 +156,9 @@ canvas:active {
 
 @keyframes fade-block {
   from {
-    opacity: 1;
+    transform: translateX(0%);
   }
   to {
-    opacity: 0;
+    transform: translateX(110%);
   }
 }
