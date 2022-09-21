@@ -133,50 +133,6 @@ export const Vehicles = [
   },
   {
     type: "LANDROVER",
-    vrn: "MB96AA",
-    ac: "NB50103100",
-    engine: "25L03013A",
-    chassis: "SALLDBA67WA143101",
-    nsn: "2320998939966",
-    aesp: "2320-D-128",
-    dtp: "N/A",
-    rpc: "N/A",
-    desc: "TUM HS GS SOFT TOP",
-    class: "IV",
-    dgvw: "3500",
-    ulw: "3350",
-    info: "NIL",
-    // prettier-ignore
-    mot: ["N/A","Y","Y","Y","N/A","Y","N/A","N/A","N/A","Y","Y","Y","Y","N/A","N/A","N/A","Y","Y","Y","Y","Y","Y","Y","Y","Y", "Y","N/A","Y","Y","Y","Y","Y","N/A","Y","Y","Y","Y","Y","Y","Y","N/A","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","N/A",     "N/A","Y","Y","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A"
-    ],
-    // prettier-ignore
-    operational: ["Y","Y","Y","Y","N/A","N/A","Y","N/A","N/A","Y","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","Y","Y","N/A",    "N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","Y",      "Y","Y","Y","Y","Y","N/A","N/A","Y","Y"
-    ],
-  },
-  {
-    type: "LANDROVER",
-    vrn: "HH60AA",
-    ac: "NB50103100",
-    engine: "15L01142A",
-    chassis: "SALLDBA67TA998227",
-    nsn: "2320998939743",
-    aesp: "2320-D-128",
-    dtp: "N/A",
-    rpc: "N/A",
-    desc: "TUM HS GS SOFT TOP",
-    class: "IV",
-    dgvw: "3500",
-    ulw: "3350",
-    info: "NIL",
-    // prettier-ignore
-    mot: ["N/A","Y","Y","Y","N/A","Y","N/A","N/A","N/A","Y","Y","Y","Y","N/A","N/A","N/A","Y","Y","Y","Y","Y","Y","Y","Y","Y", "Y","N/A","Y","Y","Y","Y","Y","N/A","Y","Y","Y","Y","Y","Y","Y","N/A","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","N/A",     "N/A","Y","Y","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A"
-    ],
-    // prettier-ignore
-    operational: ["Y","Y","Y","Y","N/A","N/A","Y","N/A","N/A","Y","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","Y","Y","N/A",    "N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","Y",      "Y","Y","Y","Y","Y","N/A","N/A","Y","Y"
-    ],
-  },
-  {
-    type: "LANDROVER",
     vrn: "PN97AA",
     ac: "NB50093100",
     engine: "25L08382B",
@@ -247,28 +203,6 @@ export const Vehicles = [
     ac: "NB50203100",
     engine: "PRO40015369-1",
     chassis: "SALLDBA67VA107936",
-    nsn: "2320998939744",
-    aesp: "2320-D-128",
-    dtp: "N/A",
-    rpc: "N/A",
-    desc: "TUM HS FFR HARD TOP",
-    class: "IV",
-    dgvw: "3500",
-    ulw: "3350",
-    info: "FFR",
-    // prettier-ignore
-    mot: ["N/A","Y","Y","Y","N/A","Y","N/A","N/A","N/A","Y","Y","Y","Y","N/A","N/A","N/A","Y","Y","Y","Y","Y","Y","Y","Y","Y", "Y","N/A","Y","Y","Y","Y","Y","N/A","Y","Y","Y","Y","Y","Y","Y","N/A","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","N/A",     "N/A","Y","Y","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A"
-    ],
-    // prettier-ignore
-    operational: ["Y","Y","Y","Y","N/A","N/A","Y","N/A","N/A","Y","N/A","N/A","Y","Y","Y","Y","N/A","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","Y","N/A","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","Y","Y","Y","Y","Y","Y","Y","N/A","N/A","Y","Y"
-    ],
-  },
-  {
-    type: "LANDROVER",
-    vrn: "KK02AA",
-    ac: "NB50203100",
-    engine: "RTD14888",
-    chassis: "SALLDBA67VA110242",
     nsn: "2320998939744",
     aesp: "2320-D-128",
     dtp: "N/A",
@@ -533,46 +467,6 @@ export const Vehicles = [
     ac: "NB28533107",
     engine: "N/A",
     chassis: "6905/39",
-    nsn: "2330999086472",
-    aesp: "2330-E-202",
-    dtp: "N/A",
-    rpc: "N/A",
-    desc: "TLR LW 1.13T 2 WHD GS CARGO",
-    class: "02",
-    dgvw: "1750",
-    ulw: "620",
-    info: "NIL",
-    // prettier-ignore
-    mot: ["Y","N/A","N/A","N/A","N/A","Y","Y","Y","N/A","N/A","Y","Y","Y","Y","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","N/A","N/A","N/A","Y","N/A","N/A","N/A","N/A","Y","N/A","N/A","N/A","N/A","N/A","Y","N/A","N/A","Y","Y","N/A","N/A","Y","N/A","N/A","N/A","N/A","Y","N/A","Y","Y"],
-    // prettier-ignore
-    operational: ["Y","Y","Y","N/A","N/A","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","N/A","Y","N/A","N/A","N/A","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","Y","Y","Y","Y","N/A","Y","N/A","N/A","Y","Y"],
-  },
-  {
-    type: "TRL",
-    vrn: "XG53AA",
-    ac: "NB28533107",
-    engine: "N/A",
-    chassis: "4847/04",
-    nsn: "2330999086472",
-    aesp: "2330-E-202",
-    dtp: "N/A",
-    rpc: "N/A",
-    desc: "TLR LW 1.13T 2 WHD GS CARGO",
-    class: "02",
-    dgvw: "1750",
-    ulw: "620",
-    info: "NIL",
-    // prettier-ignore
-    mot: ["Y","N/A","N/A","N/A","N/A","Y","Y","Y","N/A","N/A","Y","Y","Y","Y","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","N/A","N/A","N/A","Y","N/A","N/A","N/A","N/A","Y","N/A","N/A","N/A","N/A","N/A","Y","N/A","N/A","Y","Y","N/A","N/A","Y","N/A","N/A","N/A","N/A","Y","N/A","Y","Y"],
-    // prettier-ignore
-    operational: ["Y","Y","Y","N/A","N/A","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","N/A","Y","N/A","N/A","N/A","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","Y","Y","Y","Y","N/A","Y","N/A","N/A","Y","Y"],
-  },
-  {
-    type: "TRL",
-    vrn: "XG77AA",
-    ac: "NB28533107",
-    engine: "N/A",
-    chassis: "4842/34",
     nsn: "2330999086472",
     aesp: "2330-E-202",
     dtp: "N/A",
