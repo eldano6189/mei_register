@@ -216,7 +216,7 @@ export const Vehicles = [
     mot: ["N/A","Y","Y","Y","N/A","Y","N/A","N/A","N/A","Y","Y","Y","Y","N/A","N/A","N/A","Y","Y","Y","Y","Y","Y","Y","Y","Y", "Y","N/A","Y","Y","Y","Y","Y","N/A","Y","Y","Y","Y","Y","Y","Y","N/A","N/A","N/A","N/A","N/A","Y","Y","N/A","N/A","N/A",     "N/A","Y","Y","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A"
     ],
     // prettier-ignore
-    operational: ["Y","Y","Y","Y","N/A","N/A","Y","N/A","N/A","Y","N/A","N/A","Y","Y","Y","Y","N/A","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","Y","N/A","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","Y","Y","Y","Y","Y","Y","Y","N/A","N/A","Y","Y"
+    operational: ["Y","Y","Y","Y","N/A","N/A","Y","N/A","N/A","Y","N/A","N/A","Y","Y","Y","Y","N/A","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","Y","N/A","N/A","N/A","N/A","N/A","N/A","Y","Y","Y","Y","Y","Y","Y","N/A","N/A","Y","Y"
     ],
   },
   {
